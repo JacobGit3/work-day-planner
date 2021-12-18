@@ -22,7 +22,10 @@ textarea{
 }
 
 .description{
+  padding-top: 10px;
   white-space: pre-wrap;
+  flex: 1;
+  flex-basis: 300px;
 }
 
 .time-block{
@@ -34,9 +37,14 @@ textarea{
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;;
+  display: flex;
+  justify-content: space-between;
 }
 
 .hour {
+  padding-top: 10px;
+  flex-basis: 75px;
+  text-align: right;
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
@@ -58,6 +66,8 @@ textarea{
 }
 
 .saveBtn {
+  padding-top: 30px;
+  flex-basis: 50px;]
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
