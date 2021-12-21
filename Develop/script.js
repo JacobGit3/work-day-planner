@@ -9,25 +9,28 @@ var calendarTime = ["09","10","11","12","13","14","15","16","17"];
 
 // Create time blocks sections
 for (var i = 0; i < hours; i++){
-    console.log("for loop ran");
     var rowId = `${i}`;
     var row = $('#container').append(`<div class="row time-block" id="${rowId}"></div>`); 
     var time = $(`#${rowId}`).append(`<div class='hour'>${calendarTimeText[i]}<div>`);
     var text = $(`#${rowId}`).append(`<input type='text' class='description id=${calendarTime[i]}'></input>`);
-    var save = $(`#${rowId}`).append("<div class='saveBtn'><i class='fa fa-save'></i></div>");
+    var save = $(`#${rowId}`).append(`<button class='saveBtn' id='saveBtn'><i class='fa fa-save'></i></button>`);
 };
 
 // Check time and colour blocks based on time
 function checktime(){
-    console.log("checktime")
+    // Update time at top of web page
+    var currentTime = moment().format('LLLL');
+    $('#currentDay').append(currentTime)
+
+    // Check time and change color
     var time = moment().format('HH');
+    var timeBlock = 9;
     for (var i=0; i<hours; i++){
         var rowId = `${i}`;
-        var timeBlock = 9
         if (timeBlock < time){
             $(`#${rowId}`).addClass("past");
         }
-        if (timeBlock === time){
+        if (timeBlock == time){
             $(`#${rowId}`).addClass("present");
         }
         if (timeBlock > time){
@@ -37,8 +40,30 @@ function checktime(){
     }
 }
 
-checktime()
 
+// Function to run checktime on load of page then once every hour
+function hourly() {
+    // set interval variables and call checktime on load
+    var minsInterval = (60 - moment().format('m')) * 1000 * 60;
+    var hour = 1000 * 60 * 60;
+    checktime();
 
+    // If time isnt exactly at an hour, set interval to mins to next hour
+    if (moment().format('m') != 0) {
+        setInterval(hourly, minsInterval);
+    }
+    // Set interval to be one hour
+    else{
+        setInterval(hourly, hour);
+    }
+}
 
-// Event listeners 
+// Event listeners and handler for save button
+btns = document.getElementsByClassName("saveBtn");
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+        console.log('saved')
+    })
+}
+
+hourly()
