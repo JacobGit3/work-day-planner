@@ -79,3 +79,8 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+input {
+  background: none;
+  border: none;
+}
