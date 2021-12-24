@@ -12,8 +12,8 @@ for (var i = 0; i < hours; i++){
     var rowId = `${i}`;
     var row = $('#container').append(`<div class="row time-block" id="${rowId}"></div>`); 
     var time = $(`#${rowId}`).append(`<div class='hour'>${calendarTimeText[i]}<div>`);
-    var text = $(`#${rowId}`).append(`<input type='text' class='description id=${calendarTime[i]}'></input>`);
-    var save = $(`#${rowId}`).append(`<button class='saveBtn' id='saveBtn'><i class='fa fa-save'></i></button>`);
+    var text = $(`#${rowId}`).append(`<input type='text' class='description id=${i}}'></input>`);
+    var save = $(`#${rowId}`).append(`<button class='saveBtn' id='saveBtn${i}'><i class='fa fa-save'></i></button>`);
 };
 
 // Check time and colour blocks based on time
@@ -58,12 +58,17 @@ function hourly() {
     }
 }
 
+
+function saveThis() {
+    for (var i=0; i<hours; i++) {
+        console.log('saved');
+    }
+};
+
 // Event listeners and handler for save button
-btns = document.getElementsByClassName("saveBtn");
+var btns = document.getElementsByClassName('saveBtn${i}');
 for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function () {
-        console.log('saved')
-    })
-}
+    btns[i].addEventListener("click", saveThis)
+};
 
 hourly()
