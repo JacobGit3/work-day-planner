@@ -1,3 +1,5 @@
+
+
 // Global Variables
 var hours = 9;
 var schedule = $("container");
@@ -6,6 +8,9 @@ var schedule = $("container");
 var calendarTimeText = ["9AM","10AM","11AM","12AM","1PM","2PM","3PM","4PM","5PM"];
 var calendarTime = ["09","10","11","12","13","14","15","16","17"];
 
+
+//Add Current time to top of page
+$('#currentDay').append(moment().format('LLLL'))
 
 // Create time blocks sections
 for (var i = 0; i < hours; i++){
@@ -20,7 +25,7 @@ for (var i = 0; i < hours; i++){
 function checktime(){
     // Update time at top of web page
     var currentTime = moment().format('LLLL');
-    $('#currentDay').append(currentTime)
+    $('#currentDay').innerHTML = currentTime;
 
     // Check time and change color
     var time = moment().format('HH');
