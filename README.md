@@ -18,7 +18,10 @@ These functionalities are all essential to create an organized scheduled workday
 
 The running application can be accessed here for viewing and testing:
 
+https://jacobgit3.github.io/work-day-planner/
+
 The code for this application can be found in this github repository:
+https://github.com/JacobGit3/work-day-planner
 
 This is a screenshot of the Webpage 
 *note time blocks are greyed out due to being in the past*
@@ -26,4 +29,5 @@ This is a screenshot of the Webpage
 ## Contribution
 
 Code written by Jacob Liberty
+
 Initial Code/CSS from Trilogy Education
