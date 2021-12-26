@@ -1,20 +1,20 @@
 # work-day-planner
 
-#Purpose
+##Purpose
 
 This application has been designed to organise tasks in hourly time blocks.
 The Tasks can be saved and rewitten to the time blocks from local storage using the save button.
 The time blocks change colour based on if they are in the present past or future.
 These functionalities are all essential to create an organized scheduled workday.
 
-#Build With
+##Build With
 
 - HTML
 - CSS
 - Javascript
 - Jquery
 
-#Webpage
+##Webpage
 
 The running application can be accessed here for viewing and testing:
 
