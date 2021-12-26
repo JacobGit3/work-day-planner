@@ -25,7 +25,7 @@ https://github.com/JacobGit3/work-day-planner
 
 This is a screenshot of the Webpage 
 *note time blocks are greyed out due to being in the past*
-![Screenshot](./assets/images/screenshot.PNG)
+![Screenshot](./assets/images/Screenshot.PNG)
 
 ## Contribution
 
