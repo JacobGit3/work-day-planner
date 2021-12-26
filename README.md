@@ -23,3 +23,7 @@ The code for this application can be found in this github repository:
 This is a screenshot of the Webpage 
 *note time blocks are greyed out due to being in the past*
 
+## Contribution
+
+Code written by Jacob Liberty
+Initial Code/CSS from Trilogy Education
